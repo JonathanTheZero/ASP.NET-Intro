@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET Intro", "ASP.NET Intro\ASP.NET Intro.csproj", "{10A63D1F-21D9-4BB2-83E4-5BA549D47974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A63D1F-21D9-4BB2-83E4-5BA549D47974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A63D1F-21D9-4BB2-83E4-5BA549D47974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A63D1F-21D9-4BB2-83E4-5BA549D47974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A63D1F-21D9-4BB2-83E4-5BA549D47974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C5CC206-B96C-4F2A-B278-1D56E389FDC4}
+	EndGlobalSection
+EndGlobal
