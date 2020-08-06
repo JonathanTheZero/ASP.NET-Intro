@@ -23,6 +23,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Movies", "", "Movies")</li>
                 </ul>
             </div>
         </div>
@@ -40,3 +41,34 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/Scripts/globalize/globalize.js"></script>
+    <script src="~/Scripts/globalize/cultures/globalize.culture.@(System.Threading.Thread.CurrentThread.CurrentCulture.Name).js"></script>
+    <script>
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) ||
+            !isNaN(Globalize.parseFloat(value));
+    }
+    $(document).ready(function () {
+        Globalize.culture('@(System.Threading.Thread.CurrentThread.CurrentCulture.Name)');
+    });
+    </script>
+    <script>
+        jQuery.extend(jQuery.validator.methods, {
+            range: function (value, element, param) {
+                //Use the Globalization plugin to parse the value
+                var val = Globalize.parseFloat(value);
+                return this.optional(element) || (
+                    val >= param[0] && val <= param[1]);
+            }
+        });
+        $.validator.methods.date = function (value, element) {
+            return this.optional(element) ||
+                Globalize.parseDate(value) ||
+                Globalize.parseDate(value, "yyyy-MM-dd");
+        }
+    </script>
+}
